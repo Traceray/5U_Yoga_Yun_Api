@@ -16,7 +16,7 @@ CourseInfo API 是一类简单的HTTP接口，用于返回查询瑜伽课程数�
 |  query | 否  |  无 |  空中瑜伽,高温瑜伽 | 检索课程名称。支持多个关键字并集检索。不同关键字间以$符号分隔，最多支持10个关键字检索。如:”空中瑜伽$高温瑜伽” |
 |filter|否|无|  filter=course_type_ids:ids |检索过滤条件，当scope取值为2时才会调用这些过滤信息。默认为1时不做过滤排序处理:各个字段间采用竖线分隔。<br/> 【course_type_ids】 课程类别id，注意：设置该字段可提高检索速度和过滤精度，各个Id之间以,分隔开来 。| 
 |fields|否|无|默认根据请求字段根据请求格式来|给API消费者一个可以选择字段的能力,各个字段间以,分隔。仅当scope为6时生效。取值为（objectId,appid,courseName,courseDescribe,courseDetailDescribe,courseHourLength,maxOrderNum,maxOrderLineUpNum,imgUrl_courseImg,addressInfoId,courseTypeId,isShowOnPage,pageShowConfig,otherInfoConfig,note）|
-|embed|否|无|自动加载相关资源，仅当SCOPE为6自定义时生效,以逗号为分隔串。值为(AddressInfo,CourseTypeInfo)|
+|embed|否|无|CourseTypeInfo|自动加载相关资源，仅当SCOPE为6自定义时生效,以逗号为分隔串。值为(AddressInfo,CourseTypeInfo)|
 |sort_name|否|无|courseName|【sort_name】 排序字段 取值有： default（默认）；courseName（课程名称）；courseHourLength（课程时长）；maxOrderNum（最大可预约数量）；maxOrderLineUpNum（最大可排队数量）；createAt(创建时间);updateAt(更新时间); |
 |sort_rule|否|无| 【sort_rule】 排序规则：0（从高到低），1（从低到高）|
 |page_size|否|20|20|范围记录数量，默认为10条记录，最大返回20条。多关键字检索时，返回的记录数为关键字个数*page_size。|
