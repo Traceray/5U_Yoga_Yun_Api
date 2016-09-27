@@ -33,13 +33,13 @@ CourseInfo API 是一类简单的HTTP接口，用于返回查询瑜伽课程数�
 ## 状态码附录
 
 返回码	定义	英文返回描述
-0	正常	ok
-2	请求参数非法	Parameter Invalid
-3	权限校验失败	Verify Failure
-4	配额校验失败	Quota Failure
-5	ak不存在或者非法	AK Failure
-2xx	无权限	
-3xx	配额错误
+- 0	正常	ok
+- 2	请求参数非法	Parameter Invalid
+- 3	权限校验失败	Verify Failure
+- 4	配额校验失败	Quota Failure
+- 5	ak不存在或者非法	AK Failure
+- 2xx	无权限	
+- 3xx	配额错误
 
 ## 升级说明
 
